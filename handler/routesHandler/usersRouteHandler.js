@@ -40,8 +40,10 @@ const data2 = {
 //module wrapper
 const handler = {};
 
-handler.usersRouteHandler = () => {
-  console.log("this is users route");
+handler.usersRouteHandler = (reqProperties, callback) => {
+  callback(200, {
+    message: "this is users route",
+  });
 };
 //export
 module.exports = handler;

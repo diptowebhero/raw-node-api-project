@@ -1,8 +1,10 @@
 //module wrapper
-const handler ={};
+const handler = {};
 
-handler.notFoundRouteHandler = ()=>{
-    console.log('Your requested route is not found');
-}
+handler.notFoundRouteHandler = (reqProperties, callback) => {
+  callback(404, {
+    message: "Your requested URL  is not found",
+  });
+};
 //export
 module.exports = handler;
